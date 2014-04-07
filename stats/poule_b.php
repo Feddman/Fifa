@@ -1,9 +1,7 @@
 <?php 
 require '../config/connect.php';
-//
-//$data = $con->query("SELECT * FROM teams WHERE poule = 'a'");
 
-$sql = "SELECT naam, punten FROM teams WHERE poule = 'B' ORDER BY punten DESC";
+$sql = "SELECT naam, totaal_punten FROM teams WHERE poule = 'B' ORDER BY punten DESC";
 $query = mysqli_query($con, $sql);
 
     $i = 1;
@@ -11,7 +9,7 @@ $query = mysqli_query($con, $sql);
        echo '<tr>';
        echo "<td> $i </td>";
        echo "<td>" . $row['naam'] . "</td>";
-       echo "<td>" . $row['punten'] . "</td>";
+       echo "<td>" . $row['totaal_punten'] . "</td>";
        echo '</tr>';
        $i++;
     }

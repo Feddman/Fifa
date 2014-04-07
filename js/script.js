@@ -1,4 +1,9 @@
+
+// uitvoeren realTime functie
 realTime();
+
+
+
 
 function realTime() {
     setInterval(function() {
